@@ -4,7 +4,7 @@ Open WebUI is an open-source, self-hosted web interface for large language model
 
 ![Deploy on Railway](https://railway.com/button.svg)
 
-Deploy: https://railway.com/deploy/open-web-ui?referralCode=zxcgoT
+Deploy: https://railway.com/deploy/open-web-ui?referralCode=zxcgoT&utm_medium=integration&utm_source=template&utm_campaign=generic
 
 ## 🚀 Quick Start Deployment Guide
 
