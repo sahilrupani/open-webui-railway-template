@@ -2,9 +2,7 @@
 
 Open WebUI is an open-source, self-hosted web interface for large language models. It offers a familiar chat experience over any combination of OpenAI, Anthropic Claude, and locally-run Ollama models, and adds multi-user accounts, role-based access control, a built-in RAG engine for chatting with your own documents, and a tool runner.
 
-![Deploy on Railway](https://railway.com/button.svg)
-
-Deploy: https://railway.com/deploy/open-web-ui?referralCode=zxcgoT&utm_medium=integration&utm_source=template&utm_campaign=generic
+[![Deploy on Railway](https://railway.com/button.svg)](https://railway.com/deploy/open-web-ui?referralCode=zxcgoT&utm_medium=integration&utm_source=template&utm_campaign=generic)
 
 ## 🚀 Quick Start Deployment Guide
 
