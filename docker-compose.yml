@@ -1,0 +1,37 @@
+# Open WebUI — self-hosted multi-model AI chat (OpenAI / Claude / Ollama + RAG)
+# Quick start:
+#   cp .env.example .env      # then set WEBUI_SECRET_KEY and at least one LLM key
+#   docker compose up -d
+#   open http://localhost:3000
+#
+# The named volume is what makes this durable: chat history, user accounts,
+# uploaded documents and RAG vectors all live in /app/backend/data.
+
+name: open-webui
+
+services:
+  open-webui:
+    image: ghcr.io/open-webui/open-webui:main
+    container_name: open-webui
+    restart: unless-stopped
+    ports:
+      - "${OPEN_WEBUI_PORT:-3000}:8080"
+    env_file: .env
+    volumes:
+      - open-webui:/app/backend/data
+    extra_hosts:
+      # Lets OLLAMA_BASE_URL reach an Ollama instance running on the host.
+      - "host.docker.internal:host-gateway"
+
+  # Uncomment to run Ollama alongside Open WebUI for local inference,
+  # then set OLLAMA_BASE_URL=http://ollama:11434 in .env
+  # ollama:
+  #   image: ollama/ollama:latest
+  #   container_name: ollama
+  #   restart: unless-stopped
+  #   volumes:
+  #     - ollama:/root/.ollama
+
+volumes:
+  open-webui:
+  # ollama:
